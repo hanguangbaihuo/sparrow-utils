@@ -1,0 +1,24 @@
+{
+  "name": "sparrow-utils",
+  "version": "1.0.0",
+  "description": "sparrow utils",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "webpack": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiminghua/sparrow-utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiminghua/sparrow-utils/issues"
+  },
+  "homepage": "https://github.com/shiminghua/sparrow-utils#readme"
+}
