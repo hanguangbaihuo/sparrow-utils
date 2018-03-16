@@ -2,20 +2,28 @@
   "name": "sparrow-utils",
   "version": "1.0.0",
   "description": "sparrow utils",
-  "main": "index.js",
+  "main": "dist/sparrow-utils.js",
+  "module": "src/index.js",
   "dependencies": {
     "lodash": "^4.17.5",
     "webpack": "^4.1.1"
   },
   "devDependencies": {},
   "scripts": {
+    "build": "webpack-cli --mode production --config webpack.config.js",
+    "build:development": "webpack-cli --mode development --config webpack.config.js",
     "test": "test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shiminghua/sparrow-utils.git"
   },
-  "author": "",
+  "keywords": [
+    "sparrow",
+    "sparrow-utils",
+    "sparrow utils"
+  ],
+  "author": "shiminghua2008@qq.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shiminghua/sparrow-utils/issues"
