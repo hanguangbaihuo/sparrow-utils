@@ -5,7 +5,9 @@
   "main": "dist/sparrow-utils.js",
   "module": "src/index.js",
   "dependencies": {
+    "fetch": "^1.1.0",
     "lodash": "^4.17.5",
+    "moment": "^2.21.0",
     "webpack": "^4.1.1"
   },
   "devDependencies": {},
