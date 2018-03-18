@@ -5,3 +5,9 @@
 - Babel 能够转换 JSX 语法并去除类型注释。
 - Babel 是建立在插件之外的。 你可以使用已有的插件或者自己编写插件来组成属于你自己的转换管道。使用或者创建一个 preset 可以让你轻松使用多个插件。
 - 支持 Source map 因此可以轻松调试编译后代码。
+
+## 参考资料
+
+- [中文网站](https://babeljs.cn/)
+- [英文网站](https://babeljs.io/)
+- [github](https://github.com/babel/babel)
