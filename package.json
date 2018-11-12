@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiminghua/sparrow-utils.git"
+    "url": "git+https://github.com/hanguangbaihuo/sparrow-utils.git"
   },
   "keywords": [
     "sparrow",
@@ -30,7 +30,7 @@
   "author": "shiminghua2008@qq.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shiminghua/sparrow-utils/issues"
+    "url": "https://github.com/hanguangbaihuo/sparrow-utils/issues"
   },
-  "homepage": "https://github.com/shiminghua/sparrow-utils#readme"
+  "homepage": "https://github.com/hanguangbaihuo/sparrow-utils#readme"
 }
