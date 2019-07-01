@@ -15,8 +15,8 @@ import isPlainObject from './type/is_plain_object';
  * 
  * @returns object
  */
-function deepClone(target, ...source) {
-  // 确保接受方式一个复杂的数据类型
+function deepClone(target = {}, ...source) {
+  // 确保接受方式是一个复杂的数据类型
   if (typeof target !== 'object') {
     target = {};
   }
@@ -24,6 +24,7 @@ function deepClone(target, ...source) {
   // 循环source里边的每个对象
   for (let i = 0; i < source.length; i++) {
 
+    // 被拷贝对象
     const options = source[i];
 
     // 被拷贝对象不为 null 或 undefined 
@@ -44,8 +45,7 @@ function deepClone(target, ...source) {
         if (isPlainObject(copy)) {
           clone = src && isPlainObject(src) ? src : {};
           target[name] = deepClone(clone, copy);
-        }
-        else if (Array.isArray(copy)) {
+        } else if (Array.isArray(copy)) {
           clone = src && Array.isArray(src) ? src : [];
           target[name] = deepClone(clone, copy);
         } else {
@@ -54,6 +54,9 @@ function deepClone(target, ...source) {
       }
     }
   }
+
+  return target;
+
 }
 
 export default deepClone;

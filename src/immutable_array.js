@@ -130,3 +130,60 @@ export const insertArrayReducerAfter = (array, index, data) => {
 export const insertArrayReducerBefore = (array, index, data) => {
   return [...array.slice(0, index), data, ...array.slice(index)];
 };
+
+/**
+ * 批量移动数组的指定元素到指定位置
+ * 
+ * @param {Array} array 源数组
+ * @param {Array} indexArr 需要移动的元素下标组成的数组
+ * @param {number} toIndex 要移动到的位置
+ * 
+ * @return array 返回一个新数组
+ */
+export const batchMobile = (array = [], indexArr = [], toIndex) => {
+  // 将要移动的元素组合成数组
+  const batchArr = indexArr.map(item => {
+    return array[item];
+  });
+
+  // 过滤掉所有被移动元素，返回新数组
+  const sourceArray = array.filter((item, index) => {
+    return indexArr.indexOf(index) === -1;
+  });
+
+  // toIndex <= -1 时，批量移动到数组顶部
+  if (toIndex <= -1) {
+    return [
+      ...batchArr,
+      ...sourceArray,
+    ];
+  }
+
+  // toIndex >= array.length 时，批量移动到数组尾部
+  if (toIndex >= array.length) {
+    return [
+      ...sourceArray,
+      ...batchArr,
+    ];
+  }
+
+  // 当 0 <= toIndex < array.length 时，进行如下移动
+  // 重新设置目标位置
+  // 被移动元素的下标有几个小于 toIndex 的值
+  let i = 0;
+  indexArr.forEach((item) => {
+    if (item < toIndex) {
+      i++;
+    }
+  });
+  // toIndex - i 即为新数组中目标元素的位置
+  toIndex = toIndex - i;
+
+  // 在新数组的新位置上组合两个数组
+  return [
+    ...sourceArray.slice(0, toIndex + 1),
+    ...batchArr,
+    ...sourceArray.slice(toIndex + 1, sourceArray.length),
+  ];
+
+};
