@@ -43,12 +43,15 @@ function deepClone(target = {}, ...source) {
         // 如果被拷贝对象 copy 是原生对象或者数组时，递归调用
         // 否则为目标对象 target 赋值
         if (isPlainObject(copy)) {
+          // 目标为对象时
           clone = src && isPlainObject(src) ? src : {};
           target[name] = deepClone(clone, copy);
         } else if (Array.isArray(copy)) {
+          // 目标为数组时
           clone = src && Array.isArray(src) ? src : [];
           target[name] = deepClone(clone, copy);
         } else {
+          // 目标为值类型时
           target[name] = copy;
         }
       }
