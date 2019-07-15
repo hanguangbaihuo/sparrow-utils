@@ -19,6 +19,7 @@
 /**
  * 搜索函数
  * @param data array 需要搜索的数据
+ *        @param {string} searchList data.item.searchList 搜索是针对数组中对象的这个字段进行搜索
  * @param str  string 搜索关键词
  * 
  * @return array
