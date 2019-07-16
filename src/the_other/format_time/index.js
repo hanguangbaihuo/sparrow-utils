@@ -44,7 +44,7 @@ export const returnYesterday = function returnYesterday() {
 /**
  * 本月，本月1日00:00:00到当前时刻
  */
-export const returnYesterday = function returnYesterday() {
+export const returnThisMonth = function returnThisMonth() {
   let startDate = moment().startOf('month').format('YYYY-MM-DD');
   let startTime = moment().startOf('month').format('HH:mm:ss');
   let endDate = moment().format('YYYY-MM-DD');
@@ -60,7 +60,7 @@ export const returnYesterday = function returnYesterday() {
 /**
  * 上月，上月1日00:00:00到上月最后一天23:59:59
  */
-export const returnYesterday = function returnYesterday() {
+export const returnLastMonth = function returnLastMonth() {
   let now = moment();
   let month = now.get('month');
   now.set('month', month - 1);
