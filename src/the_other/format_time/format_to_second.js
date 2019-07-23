@@ -6,7 +6,7 @@
  * @example '13:02:05'
  */
 
-export const format_to_second = function format_to_second(mescStr) {
+export const formatToSecond = function formatToSecond(mescStr) {
   let date = new Date(mescStr);
   let hour = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours());
   let minute = (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes());

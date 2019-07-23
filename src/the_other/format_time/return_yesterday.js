@@ -1,5 +1,5 @@
 /**
- * 返回今天这一时间段，昨天00:00:00到昨天23:59:59
+ * 返回昨天这一时间段，昨天00:00:00到昨天23:59:59
  * 
  * @author junchao
  * @date 2019-07-16
@@ -40,14 +40,18 @@ function transYesterday(mescStr) {
     let lastMonthDate = new Date(year, month, 0);
     // 获取上个月的天数
     day = lastMonthDate.getDate();
-    if (month < 10) {
-      month = `0${month}`;
+    if (month < 9) {
+      month = `0${month + 1}`;
       return (`${year}-${month}-${day}`)
     }
     return (`${year}-${month}-${day}`)
   }
-  if (month < 10) {
+  if (month < 9) {
     month = `0${month + 1}`;
+    if (day < 10) {
+      day = `0${day - 1}`;
+      return (`${year}-${month}-${day}`)
+    }
     return (`${year}-${month}-${day - 1}`)
   }
   if (day < 10) {
