@@ -8,8 +8,10 @@
 /**
  * 除去字符串中符号
  * 
- * @param {String} str 要处理的数字
+ * @param {String} str 要处理的字符串
  * @param {String} mark 要移除的符号
+ * @example '1,2,3,4,5,6,7,8,9' => '123456789'
+ * RegExp 效率较低
  */
 export const removeStringMark = function removeStringMark(str, mark) {
   // 通过 prototype 为 JavaScript 的 String 对象添加方法，来实现将所有 " " 替换为 ""

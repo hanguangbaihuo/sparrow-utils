@@ -1,3 +1,5 @@
+import moment from 'moment';
+// import moment from './moment/moment.js';
 /**
  * 利用moment进行时间格式化
  * 
@@ -9,6 +11,7 @@
 
 /**
  * 今天，今天00:00:00到当前时刻
+ * @example {start:'2019-07-16 00:00:00',end:'2019-07-16 16:40:30'}
  */
 export const returnToday = function returnToday() {
   let startDate = moment().startOf('day').format('YYYY-MM-DD');
@@ -16,15 +19,14 @@ export const returnToday = function returnToday() {
   let endDate = moment().format('YYYY-MM-DD');
   let endTime = moment().format('HH:mm:ss');
   return {
-    startDate,
-    startTime,
-    endDate,
-    endTime,
+    start: `${startDate} ${startTime}`,
+    end: `${endDate} ${endTime}`,
   }
 };
 
 /**
  * 昨天，昨天00:00:00到23:59:59
+ * @example {start:'2019-07-15 00:00:00',end:'2019-07-15 23:59:59'}
  */
 export const returnYesterday = function returnYesterday() {
   let day = moment().get('day');
@@ -34,15 +36,14 @@ export const returnYesterday = function returnYesterday() {
   let endDate = moment().endOf('day').format('YYYY-MM-DD');
   let endTime = moment().endOf('day').format('HH:mm:ss');
   return {
-    startDate,
-    startTime,
-    endDate,
-    endTime,
+    start: `${startDate} ${startTime}`,
+    end: `${endDate} ${endTime}`,
   }
 };
 
 /**
  * 本月，本月1日00:00:00到当前时刻
+ * @example {start:'2019-07-01 00:00:00',end:'2019-07-16 16:40:30'}
  */
 export const returnThisMonth = function returnThisMonth() {
   let startDate = moment().startOf('month').format('YYYY-MM-DD');
@@ -50,15 +51,14 @@ export const returnThisMonth = function returnThisMonth() {
   let endDate = moment().format('YYYY-MM-DD');
   let endTime = moment().format('HH:mm:ss');
   return {
-    startDate,
-    startTime,
-    endDate,
-    endTime,
+    start: `${startDate} ${startTime}`,
+    end: `${endDate} ${endTime}`,
   }
 };
 
 /**
  * 上月，上月1日00:00:00到上月最后一天23:59:59
+ * @example {start:'2019-06-01 00:00:00',end:'2019-06-30 23:59:59'}
  */
 export const returnLastMonth = function returnLastMonth() {
   let now = moment();
@@ -69,9 +69,7 @@ export const returnLastMonth = function returnLastMonth() {
   let endDate = now.endOf('month').format('YYYY-MM-DD');
   let endTime = now.endOf('month').format('HH:mm:ss');
   return {
-    startDate,
-    startTime,
-    endDate,
-    endTime,
+    start: `${startDate} ${startTime}`,
+    end: `${endDate} ${endTime}`,
   }
 };

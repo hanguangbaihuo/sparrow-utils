@@ -18,6 +18,9 @@ const regexLicensePlate = /^[\u4e00-\u9fa5_a-zA-Z0-9]{7,8}$/;
  *   第1位和第2位与传统车牌一致，第3到第8位为序号（比传统车牌多一位）。新能源车牌的序号规则如下：
  *   小型车：第1位只能是字母D或F，第2为可以是数字或字母，第3到6位必须是数字。
  *   大型车：第1位到第5位必须是数字，第6位只能是字母D或F。
+ * @example 正确的车牌：川A123AB、川A2222学、川AF12345、川A12345D。
+ * @example 错误的车牌：川A123456、川A2222i、川AA12345、川AD123456
+ * 
  */
 export const isLicensePlate = function isLicensePlate(str) {
   return regexLicensePlate.test(str);
