@@ -12,7 +12,8 @@
   "dependencies": {
     "fetch": "^1.1.0",
     "lodash": "^4.17.5",
-    "moment": "^2.21.0"
+    "moment": "^2.24.0",
+    "wx-base64-qrcode": "^1.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
