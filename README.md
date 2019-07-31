@@ -6,7 +6,7 @@
 
 #### 是否是车牌号的验证:isLicensePlate(str)
 
-src/is_license_plate.js
+[aaaa](src/is_license_plate.js)
 
 ```
 // example
