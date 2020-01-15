@@ -1,3 +1,7 @@
 import sum from './sum';
-export const number: number = 1;
+
+const number: number = 1;
+
+export default number;
+
 console.log('这是一个测试：', number);

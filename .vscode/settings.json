@@ -1,5 +1,10 @@
 {
   "git.ignoreLimitWarning": true,
-  "eslint.enable": false,
-  "tslint.enable": false
+  // "eslint.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
