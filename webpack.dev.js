@@ -2,6 +2,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.common');
 const JsDocPlugin = require('jsdoc-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -25,5 +26,6 @@ module.exports = merge(common, {
         preserveTmpFile: false,
       },
     }),
+    new webpack.HotModuleReplacementPlugin(),
   ],
 });

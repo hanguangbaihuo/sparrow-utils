@@ -7,8 +7,8 @@
  * // returns 2
  * sum(1, 1);
  */
+
 function sum(a: number, b: number): number {
-  console.log(111);
   return a + b;
 }
 
