@@ -9,8 +9,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'sparrow_utils.js',
-    library: 'sparrowUtils',
+    library: 'sparrow_utils',
     libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   externals: {
     // lodash: {
