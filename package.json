@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "doc": "jsdoc src -r -c ./jsdoc.config.json",
     "lint": "eslint src --ext .ts"
   },
@@ -32,6 +32,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
+    "husky": "^4.0.10",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
     "jsdoc-babel": "^0.5.0",
@@ -42,6 +43,11 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --quiet && npm run test"
+    }
   },
   "repository": {
     "type": "git",
