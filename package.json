@@ -44,6 +44,11 @@
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint -- --quiet && npm run test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hanguangbaihuo/sparrow-utils.git"
