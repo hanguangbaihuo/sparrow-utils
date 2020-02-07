@@ -1,4 +1,6 @@
 import delay from './delay';
+// setTimeout和promise的共同测试参见：
+// http://www.voidcn.com/article/p-gfepuvcf-bwm.html
 
 test('return 12 after 1s', async () => {
   // 这里模拟setTimeout
