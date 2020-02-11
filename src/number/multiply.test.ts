@@ -1,0 +1,1 @@
+import multiply from './multiply';

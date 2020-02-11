@@ -1,0 +1,1 @@
+import splitNumber from './splitNumber';

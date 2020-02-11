@@ -1,0 +1,1 @@
+import toInteger from './toInteger';

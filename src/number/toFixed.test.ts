@@ -1,0 +1,1 @@
+import toFixed from './toFixed';

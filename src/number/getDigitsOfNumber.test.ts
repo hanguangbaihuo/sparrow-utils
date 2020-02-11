@@ -1,0 +1,1 @@
+import getDigitsOfNumber from './getDigitsOfNumber';

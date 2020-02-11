@@ -23,5 +23,6 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'no-plusplus': 'off',
+    'operator-linebreak': 'off'
   },
 };
