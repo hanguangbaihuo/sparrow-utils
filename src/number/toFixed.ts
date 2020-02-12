@@ -8,7 +8,7 @@ import getDigitsOfNumber from './getDigitsOfNumber';
  * @param {number} [digits] 大于等于0的整数
  * @returns {number}
  */
-function toFixed(num: any, digits: number): number {
+function toFixed(num: any, digits: any): number {
   if (!isNumber(num) || !isNumber(digits) || !isInteger(digits) || digits < 0) {
     return NaN;
   }

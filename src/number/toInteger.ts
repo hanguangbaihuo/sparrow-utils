@@ -1,4 +1,5 @@
 import isInteger from './isInteger';
+import isNumber from './isNumber';
 import splitNumber from './splitNumber';
 
 /**
@@ -20,7 +21,7 @@ function toInteger(value: any): {
   if (isInteger(value)) {
     result.times = 1;
     result.int = value;
-  } else {
+  } else if (isNumber(value)) {
     // 处理小数
     const [int, float] = splitNumber(value, '.');
     result.times = 10 ** float.length;

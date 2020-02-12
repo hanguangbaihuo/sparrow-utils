@@ -49,7 +49,7 @@ function utf8Decode(utf8Text: string): string {
       const secondChar: number = utf8Text.charCodeAt(i + 1);
       const thirdChar: number = utf8Text.charCodeAt(i + 2);
       result += String.fromCharCode(
-        ((currentChar & 15) << 12) | ((secondChar & 63) << 6) | (thirdChar & 63)
+        ((currentChar & 15) << 12) | ((secondChar & 63) << 6) | (thirdChar & 63),
       );
       i += 3;
     }
@@ -89,7 +89,7 @@ const base64: {
     let output: string = '';
     let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
     let i = 0;
-    const handledInput = input.replace(/[^A-Za-z0-9\+\/\=]/g, '');
+    const handledInput = input.replace(/[^A-Za-z0-9+/=]/g, '');
     while (i < input.length) {
       enc1 = KEYSTR.indexOf(handledInput.charAt(i++));
       enc2 = KEYSTR.indexOf(handledInput.charAt(i++));

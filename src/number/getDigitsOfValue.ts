@@ -11,7 +11,7 @@ import isNumber from './isNumber';
 function getDigitsOfValue(value: any): number {
   // 非数字
   if (!isNumber(value)) {
-    return 0;
+    return -1;
   }
   return getDigitsOfNumber(value);
 }

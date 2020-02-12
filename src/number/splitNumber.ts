@@ -6,7 +6,7 @@
  * @param {number} [value] 待待分离的数字
  * @param {string} [mark] 分隔符
  */
-function splitNumber(value: number, mark: string): string[] {
+function splitNumber(value: number, mark: string = '.'): string[] {
   return value.toString().split(mark);
 }
 

@@ -3,6 +3,9 @@
 
 /**
  * 判断是否是整数
+ * js原生有整数判断函数：Number.isInteger
+ * 建议使用的时候先确定平台是否支持或者以这种形式使用
+ * Number.isInteger || isInteger;
  * @param {any} [value] 待判断的参数
  * @returns {boolean} 返回一个布尔值
  * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isInteger
@@ -13,4 +16,4 @@ function isInteger(value: any): boolean {
     Math.floor(value) === value;
 }
 
-export default Number.isInteger || isInteger;
+export default isInteger;
