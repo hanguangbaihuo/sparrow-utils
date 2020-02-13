@@ -1,5 +1,6 @@
-import sum from './sum';
+import { sleep, delay } from './function';
 
 export default {
-  sum,
+  sleep,
+  delay,
 };
