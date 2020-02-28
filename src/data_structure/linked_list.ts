@@ -2,7 +2,7 @@
  * 链表类 LinkedList
  * @module src/data_structure/linked_list
  */
-import defaultEquals from './default_equals';
+import defaultEquals from '../utils/default_equals';
 import Node from './node';
 
 /**
