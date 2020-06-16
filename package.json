@@ -1,6 +1,6 @@
 {
   "name": "sparrow-utils",
-  "version": "0.2.0",
+  "version": "1.2.0",
   "description": "sparrow utils",
   "main": "dist/sparrow-utils.js",
   "module": "src/index.js",
