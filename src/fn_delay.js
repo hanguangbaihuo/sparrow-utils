@@ -16,7 +16,13 @@ async function delay(time, fn) {
     setTimeout(resolve, time, 'success');
   });
   await promiseDelay;
-  fn();
+
+  let res;
+  if (fn) {
+    res = fn();
+  }
+
+  return res;
 }
 
 export default delay;

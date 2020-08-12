@@ -1,6 +1,5 @@
 // 原实现没有考虑Infinity，es6新出Number.isInteger函数，不知小程序是否支持，兼容形式实现
 
-
 /**
  * 判断是否是整数
  * js原生有整数判断函数：Number.isInteger
