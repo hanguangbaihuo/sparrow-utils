@@ -1,6 +1,6 @@
 // 双向循环链表
 import DoublyLinkedList from './doubly_linked_list';
-import defaultEquals from './default_equals';
+import defaultEquals from '../utils/default_equals';
 
 class CircularLinkedList extends DoublyLinkedList{
   constructor(equalsFn = defaultEquals) {

@@ -1,8 +1,8 @@
 // 有序链表
 import DoublyLinkedList from './doubly_linked_list';
 import DoublyNode from './doubly_node';
-import defaultCompare from './default_compare';
-import defaultEquals from './default_equals';
+import defaultCompare from '../utils/default_compare';
+import defaultEquals from '../utils/default_equals';
 
 class SortedLinkedList extends DoublyLinkedList {
 
