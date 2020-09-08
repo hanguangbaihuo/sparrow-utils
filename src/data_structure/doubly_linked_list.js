@@ -1,7 +1,7 @@
 // 双向链表
 import LinkedList from './linked_list';
 import DoublyNode from './doubly_node';
-import defaultEquals from './default_equals';
+import defaultEquals from '../utils/default_equals';
 
 
 class DoublyLinkedList extends LinkedList {

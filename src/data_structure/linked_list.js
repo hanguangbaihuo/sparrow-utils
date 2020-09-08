@@ -1,5 +1,5 @@
 import Node from './node.js';
-import defaultEquals from './default_equals.js';
+import defaultEquals from '../utils/default_equals';
 
 /**
  * 使用 _ 笔记类的私有属性，编码时不要使用带有 _ 的属性和方法。
